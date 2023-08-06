@@ -28,6 +28,7 @@
   "homepage": "https://github.com/isubo-org/publish#readme",
   "devDependencies": {
     "@isubo-org/publish": "0.0.2-alpha.0",
+    "@isubo-org/version": "0.0.2-alpha.6",
     "@jest/globals": "^29.6.2",
     "chalk": "^5.3.0",
     "jest": "^29.6.2",
