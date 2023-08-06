@@ -27,9 +27,9 @@
   },
   "homepage": "https://github.com/isubo-org/publish#readme",
   "devDependencies": {
+    "@isubo-org/publish": "0.0.2-alpha.0",
     "@jest/globals": "^29.6.2",
     "chalk": "^5.3.0",
-    "isubo-version": "0.0.2-alpha.4",
     "jest": "^29.6.2",
     "rollup": "^3.27.2",
     "rollup-plugin-copy": "^3.4.0",
