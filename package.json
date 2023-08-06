@@ -4,9 +4,13 @@
   "description": "",
   "main": "main.js",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
-    "build": "rm -rf dist && npx rollup -c rollup.config.js && sed -i '1i#!/usr/bin/env node' dist/bin/index.js"
+    "build": "rm -rf dist && npx rollup -c rollup.config.js && sed -i '1i#!/usr/bin/env node' dist/bin/index.js",
+    "publish": "node bin/index.js"
   },
   "repository": {
     "type": "git",
