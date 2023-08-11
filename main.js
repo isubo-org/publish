@@ -8,6 +8,11 @@ import { isReleaseVersion, parseTagFrom } from './src/util/common.js';
 import { execSync, spawnSync } from 'child_process';
 import { conf } from './src/constant/conf.js';
 
+const cliParams = {
+  skinLogin: false,
+  skinBuild: false
+};
+
 function getPkgData() {
   const ret = JSON.parse(fs.readFileSync(conf.pkgJsonPath, 'utf8'));
   return ret;
@@ -15,6 +20,11 @@ function getPkgData() {
 
 function loginIf() {
   // const warn = (val) => streamlog(`\n${chalk.bgYellowBright(chalk.black('WARN'))} ${val}`);
+  if (cliParams.skinLogin) {
+    hinter.info('Skin exec npm login');
+    return;
+  }
+
   const { owner } = getPkgData();
   const ret = spawnSync('npm', ['whoami'], {
     encoding: 'utf8'
@@ -117,6 +127,11 @@ export function deleteScripts() {
 }
 
 export function runBuildScriptIf() {
+  if (cliParams.skinBuild) {
+    hinter.info('Skin exec build script at package.json');
+    return;
+  }
+
   const { scripts } = getPkgData();
 
   if (!scripts?.build) {
@@ -151,7 +166,10 @@ export async function prepare() {
   return cmd;
 }
 
-export async function main() {
+export async function main({ skinLogin, skinBuild }) {
+  cliParams.skinLogin = skinLogin;
+  cliParams.skinBuild = skinBuild;
+
   try {
     const cmd = await prepare();
     if (!cmd) {
@@ -160,6 +178,6 @@ export async function main() {
 
     execmdSync(cmd);
   } catch (error) {
-    console.info(`✖ ${chalk.redBright(error.message)}`);
+    hinter.error(error.message);
   }
 }

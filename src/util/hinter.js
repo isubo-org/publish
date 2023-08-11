@@ -4,6 +4,11 @@ export function streamlog(text) {
   process.stderr.write(text + '\n');
 }
 
+export function info(text) {
+  const prefix = chalk.bgGreen(chalk.black(' INFO '));
+  streamlog(`${prefix} ${text}`);
+}
+
 export function warn(text) {
   const prefix = chalk.bgGreen(chalk.black(' WARN '));
   streamlog(`${prefix} ${text}`);
