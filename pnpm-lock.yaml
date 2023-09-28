@@ -8,14 +8,17 @@ dependencies:
   prompts:
     specifier: ^2.4.2
     version: 2.4.2
+  remove:
+    specifier: ^0.1.5
+    version: 0.1.5
   yargs:
     specifier: ^17.7.2
     version: 17.7.2
 
 devDependencies:
   '@isubo-org/publish':
-    specifier: 0.0.2-alpha.0
-    version: 0.0.2-alpha.0
+    specifier: 0.0.2
+    version: 0.0.2
   '@isubo-org/version':
     specifier: 0.0.2-alpha.6
     version: 0.0.2-alpha.6
@@ -400,8 +403,9 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@isubo-org/publish@0.0.2-alpha.0:
-    resolution: {integrity: sha512-NkFQVxtsqlTFYmcwx6h7Cug7BRl7PqS1kt8Le1lLfreELMF14gi/sR9QxMd7vhm+H0UZBfijxFVJ0rJY2wM89A==}
+  /@isubo-org/publish@0.0.2:
+    resolution: {integrity: sha512-yDuJnTUNAKkDWoZfKcDGXGRKMV7RMervxR3T0PlveAlQoihchDLtlKZEb9HG60Ah8KxFOBlPU71Tf9bFeonnGQ==}
+    hasBin: true
     dependencies:
       prompts: 2.4.2
       yargs: 17.7.2
@@ -1016,6 +1020,12 @@ packages:
   /caniuse-lite@1.0.30001519:
     resolution: {integrity: sha512-0QHgqR+Jv4bxHMp8kZ1Kn8CH55OikjKJ6JmKkZYP1F3D7w+lnFXF70nG5eNfsZS89jadi5Ywy5UCSKLAglIRkg==}
     dev: true
+
+  /chainsaw@0.0.9:
+    resolution: {integrity: sha512-nG8PYH+/4xB+8zkV4G844EtfvZ5tTiLFoX3dZ4nhF4t3OCKIb9UvaFyNmeZO2zOSmRWzBoTD+napN6hiL+EgcA==}
+    dependencies:
+      traverse: 0.3.9
+    dev: false
 
   /chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -1703,6 +1713,12 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: true
+
+  /hashish@0.0.4:
+    resolution: {integrity: sha512-xyD4XgslstNAs72ENaoFvgMwtv8xhiDtC2AtzCG+8yF7W/Knxxm9BX+e2s25mm+HxMKh0rBmXVOEGF3zNImXvA==}
+    dependencies:
+      traverse: 0.6.7
+    dev: false
 
   /hosted-git-info@2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
@@ -2837,6 +2853,12 @@ packages:
       strip-indent: 3.0.0
     dev: true
 
+  /remove@0.1.5:
+    resolution: {integrity: sha512-AJMA9oWvJzdTjwIGwSQZsjGQiRx73YTmiOWmfCp1fpLa/D4n7jKcpoA+CZiVLJqKcEKUuh1Suq80c5wF+L/qVQ==}
+    dependencies:
+      seq: 0.3.5
+    dev: false
+
   /require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
     engines: {node: '>=0.10.0'}
@@ -2935,6 +2957,13 @@ packages:
     dependencies:
       lru-cache: 6.0.0
     dev: true
+
+  /seq@0.3.5:
+    resolution: {integrity: sha512-sisY2Ln1fj43KBkRtXkesnRHYNdswIkIibvNe/0UKm2GZxjMbqmccpiatoKr/k2qX5VKiLU8xm+tz/74LAho4g==}
+    dependencies:
+      chainsaw: 0.0.9
+      hashish: 0.0.4
+    dev: false
 
   /serialize-javascript@4.0.0:
     resolution: {integrity: sha512-GaNA54380uFefWghODBWEGisLZFj00nS5ACs6yHa9nLqlLpVLO8ChDGeKRjZnV4Nh4n0Qi7nhYZD/9fCPzEqkw==}
@@ -3200,6 +3229,14 @@ packages:
     dependencies:
       is-number: 7.0.0
     dev: true
+
+  /traverse@0.3.9:
+    resolution: {integrity: sha512-iawgk0hLP3SxGKDfnDJf8wTz4p2qImnyihM5Hh/sGvQ3K37dPi/w8sRhdNIxYA1TwFwc5mDhIJq+O0RsvXBKdQ==}
+    dev: false
+
+  /traverse@0.6.7:
+    resolution: {integrity: sha512-/y956gpUo9ZNCb99YjxG7OaslxZWHfCHAUUfshwqOXmxUIvqLjVO581BT+gM59+QV9tFe6/CGG53tsA1Y7RSdg==}
+    dev: false
 
   /trim-newlines@3.0.1:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}
