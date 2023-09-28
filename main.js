@@ -10,10 +10,10 @@ import { conf } from './src/constant/conf.js';
 
 const cliParams = {
   skinLogin: false,
-  skinBuild: false
+  skinBuild: false,
 };
 
-function getPkgData() {
+export function getPkgData() {
   const ret = JSON.parse(fs.readFileSync(conf.pkgJsonPath, 'utf8'));
   return ret;
 }

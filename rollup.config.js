@@ -4,7 +4,8 @@ import copy from 'rollup-plugin-copy';
 export default {
   input: {
     // index: 'index.js',
-    'bin/index': 'bin/index.js'
+    'bin/index': 'bin/index.js',
+    'main': 'main.js'
   },
   output: {
     dir: 'dist',
