@@ -16,7 +16,7 @@ export default {
     copy({
       targets: [
         // { src: 'assets/conf.template.yml', dest: 'dist/assets' },
-        { src: ['package.json', 'LICENSE', 'README.md', 'MANUAL.md', 'CHANGELOG.md'], dest: 'dist/' },
+        { src: ['package.json', 'LICENSE', 'README.md', 'MANUAL.md'], dest: 'dist/' },
       ]
     })
   ]

@@ -8,17 +8,17 @@
     "access": "public"
   },
   "bin": {
-    "isubo-publish": "bin/index.js"
+    "@isubo-org/publish": "bin/index.js"
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
-    "build": "rm -rf dist && npx rollup -c rollup.config.js && sed -i '1i#!/usr/bin/env node' dist/bin/index.js",
-    "publish": "node bin/index.js",
-    "post-version": "git push origin main && git push --tags"
+    "build": "node ./scripts/build.js",
+    "post-version": "git push origin main && git push --tags",
+    "postversion": "git push && git push origin --tags"
   },
   "standard-version": {
     "scripts": {
-      "posttag": "npm run post-version"
+      "posttag": "npm run postversion"
     }
   },
   "repository": {
