@@ -1,6 +1,10 @@
 # Changelog
+### [0.0.3-alpha.0](https://github.com/isubo-org/publish/compare/v0.0.2...v0.0.3-alpha.0) (2023-09-28)
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### Features
+
+* export getPublishCmdBy and getPkgData ([9239b05](https://github.com/isubo-org/publish/commit/9239b0574acc6f0918b81a6538d6c75f81d34c0a))
 
 ### [0.0.2](https://github.com/isubo-org/publish/compare/v0.0.2-alpha.1...v0.0.2) (2023-08-11)
 
